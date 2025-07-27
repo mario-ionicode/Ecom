@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recuperar contraseña</title>
+  <link rel="stylesheet" href="recover.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Recuperar contraseña</h1>
+    <p>Ingresa tu correo y número celular para verificar tu identidad.</p>
+    <form id="formRecuperar">
+      <input type="email" class="info" id="correo" placeholder="Correo electrónico" required />
+      <input type="tel" class="info" id="celular" placeholder="Número celular" required /> <br>
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+    <p id="mensaje"></p>
+  </div>
+
+  <script src="recover.js"></script>
+</body>
+</html>

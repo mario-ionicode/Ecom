@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <!-- Estilos específicos para nav y footer -->
+    <link rel="stylesheet" href="../componentes/nav-footer.css"> 
+
+    <!--Estilos propios generales-->
+      <link rel="stylesheet" href="CreateProduct-styles.css"> <!-- De producto-->
+
+    <script src="CreateProduct-app.js" defer ></script> <!--Producto-->
+
+    <title>Formulario para productos</title>
+</head>
+<body>
+   <!--Para linkear -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+  <!-- Imagen decorativa -->
+  <div class="page-wrapper d-flex align-items-center justify-content-center">
+    <div id="lottie-container"></div>
+
+    <div class="forumulario-container">
+        <h1 class="my-5">Nuevo Producto</h1>
+        <div id="alertContainer"></div>
+
+        <div class="row align-items-center">
+            <div class="col">
+                <form id="newItemForm">
+                    <div class="form-group">
+                        <label for="newItemName">Nombre del producto</label>
+                        <input type="text" class="form-control" id="newItemName">
+                    </div>
+                    <div class="form-group">
+                        <label for="newItemFlavour">Sabor</label>
+                        <input type="text" class="form-control" id="newItemFlavour">
+                    </div>
+                    <div class="form-group">
+                        <label for="newItemDescription">Descripción</label>
+                        <textarea class="form-control" id="newItemDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="newItemPrice">Precio</label>
+                        <input type="text" class="form-control" id="newItemPrice">
+                    </div>
+                   <div class="form-group">
+                        <label for="newItemImage" class="form-label">Imagen</label>
+                        <input type="file" class="form-control" id="newItemImage" accept="image/*" required />
+                    </div>
+                    <!-- Vista previa de la imagen seleccionada -->
+                    <!-- <div class="text-center mt-3">
+                     <img id="imagePreview" src="#" alt="Vista previa" class="img-fluid d-none" />
+                    </div>-->              
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Guardar producto</button>
+                    <button id="btnClear" class="btn btn-outline-danger mt-3">Vaciar catálogo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </main>
+    <!--Para linkear -->
+   <div id="footer-placeholder"></div>
+   
+   <!-- Scripts para cargar componentes -->
+  <script>
+    fetch('../componentes/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+
+    fetch('../componentes/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://unpkg.com/lottie-web@5.7.4/build/player/lottie.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../componentes/nav-footer.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+     <link rel="stylesheet" href="../Styles/contacto-style.css">
+  </head>
+  
+  <body>
+    <div id="nav-placeholder"></div>
+
+    <main>
+    <div class="contact-container">
+      <aside class="contact-info">
+        <h2>Contacto</h2>
+        <p><i class="bi bi-geo-alt-fill"></i> Av. Morelos 92-B Bo. Ahuateno, Teziutlán, Puebla</p>
+        <p><i class="bi bi-telephone-fill"></i> 231 110 2238</p>
+        <div class="horarios-grupo">
+          <i class="bi bi-clock-fill"></i>
+            <div class="horarios-texto">
+              <p>Lun - Vie: 9am - 8pm</p>
+              <p>Sab - Dom: 9am - 7pm</p>
+            </div>
+          </div>
+        <p><i class="bi bi-envelope-fill"></i> mariaantonietareposteri2015@gmail.com</p>
+      </aside>
+    <form id="contacto" novalidate>
+    
+      <div class="row form-row">
+        <div class="col-12 col-md-6 mb-3">
+          <label for="validationName" class="form-label">Nombre(s):</label>
+          <input type="text" class="form-control" id="validationName"   required>
+          
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <label for="validationLastName" class="form-label">Apellido(s):</label>
+          <input type="text" class="form-control" id="validationLastName"  required>
+          
+        </div>
+      </div>
+      
+      <div class="row form-row">
+        <div class="col-12 col-md-7 mb-3">
+          <label for="validationEmail" class="form-label">Email:</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="email" class="form-control" id="validationEmail" placeholder="test@example.com" required>
+            <div class="invalid-tooltip">
+              Ingresa un correo valido.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 mb-3">
+          <label for="validationPhone" class="form-label">Teléfono:</label>
+          <input type="tel" class="form-control" id="validationPhone"  required>
+          <div class="invalid-tooltip">
+            Por favor ingresa un teléfono valido.
+          </div>
+        </div>
+      </div>
+
+         
+        <div class="col-12 col-md-12 mb-3">
+           <label class="form-label" for="AreaComent">Comentarios:</label> 
+            <textarea class="form-control"  id="AreaComent" rows="4" cols="50" style="resize: none;" placeholder=""> </textarea>
+           <div class="invalid-tooltip">
+            Por favor ingresa un comentario.
+          </div>
+        </div>
+      <hr class="col-md-10 mx-auto">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <button id="btnSend" type="submit">Enviar</button>
+        </div>
+      </div>
+      <!--<img src="../About-WorkTeam/Fotos/fondo-maria.jpg" alt="Logo María Antonia" class="logo-bottom">-->
+</form>
+    
+    </div>
+    
+    </main>
+
+    <div id="footer-placeholder"></div>  
+     
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("service_gj73m43");
+   })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="contacto.js"></script>
+   
+ </body>
+  
+</html>

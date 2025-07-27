@@ -1,0 +1,303 @@
+/* -----------------------
+   Estilos generales
+------------------------ */
+* {
+  box-sizing: border-box;
+  margin-top: 0px;
+  padding: 0;
+}
+body {
+  background-color: #f7f5fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column; /* *Le agregue este flex-direction en columna para que el footer lo mandara hasta abajo de la pagina */
+  min-height: 100vh;
+  padding-bottom: 0; /* *agregue un padding bottom de 0 para que el footer este pegado al final de la pagina */
+}
+
+/* Evitar overflow horizontal */
+body, html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: nowrap; /* inicialmente sin wrap para que queden lado a lado */
+  gap: 40px;
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-top: 7rem;
+  padding: 30px 15px;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* -----------------------
+   Formulario de contacto
+------------------------ */
+form#contacto {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(132, 114, 162, 0.3);
+  padding: 30px 40px;
+  max-width: 600px;
+  min-width: 280px;
+   max-height: 800px;
+  min-height: 550px;
+  width: 40vw; 
+  color: #333;
+  max-width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  box-sizing: border-box;
+}
+
+.form-label{
+  color: rgb(132, 114, 162);
+  font-weight: 700; 
+  text-align: center;
+  letter-spacing: 1.1px;
+}
+
+form#contacto label,
+.form-floating label {
+  font-weight: 600;
+  color: rgb(188, 157, 200);
+}
+
+.form-control,
+.input-group-text {
+  background-color: rgb(188, 157, 200);
+  color: #333;
+  border: 2px solid rgb(188, 157, 200);
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: white;
+  border-color: rgb(3, 94, 95);
+  box-shadow: 0 0 6px rgb(3, 94, 95);
+  color: #000;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.input-group-text {
+  color: white;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.form-floating textarea.form-control {
+  height: 120px;
+  resize: none;
+}
+
+#btnSend {
+  background-color: rgb(3, 94, 95);
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 25px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  display: block;
+  margin: 20px auto;
+  max-width: 470px;
+}
+
+#btnSend:hover {
+  background-color: rgb(11, 150, 153);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgb(188, 157, 200);
+  margin: 25px auto;
+  width: 90%;
+}
+/*etiqueta de contacto de la empresa*/
+.contact-info {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(132, 114, 162, 0.3);
+  padding: 30px 40px;
+  max-width: 470px;
+  min-width: 280px;
+  max-height: 800px;
+  min-height: 550px;
+
+  color: rgb(132, 114, 162);
+  font-weight: 600;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+.contact-info h2 {
+  margin-bottom: 25px;
+  color: rgb(188, 157, 200);
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+
+.contact-info i {
+  color: rgb(188, 157, 200);
+  margin-right: 12px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+/* -----------------------
+   Imagen decorativa
+------------------------ */
+.logo-bottom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 250px;;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+  max-width: 60%;
+  height: auto;
+  transition: width 0.3s ease;
+  user-select: none;
+}
+
+
+
+/* -----------------------
+   Media Queries
+------------------------ */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20 15px;
+    max-width: 100%;
+    gap: 30px;
+  }
+
+  .contact-info, form#contacto {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: auto !important;
+    padding: 25px 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+
+  form#contacto {
+    padding: 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    display: flex;
+  }
+
+  .col-md-5,
+  .col-md-6,
+  .col-md-4,
+  .col-md-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #btnSend {
+    max-width: 100%;
+  }
+
+  .logo-bottom {
+    width: 200px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-bottom {
+    width: 150px; /* un poco más pequeño */
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  form#contacto {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .form-control,
+  .input-group-text {
+    font-size: 0.95rem;
+  }
+
+  #btnSend {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .form-floating textarea.form-control {
+    height: 100px;
+  }
+}
+
+/* Forzar que las columnas usen 100% ancho en móviles muy pequeños */
+@media (max-width: 375px) {
+  .col-12, .col-md-5, .col-md-10, .col-md-12 {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+   .logo-bottom {
+    width: 150px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px 15px;
+  }
+    .contact-info,
+  form#contacto {
+    width: 100% !important;
+    min-width: auto;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

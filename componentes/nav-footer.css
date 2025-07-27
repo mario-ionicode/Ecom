@@ -1,0 +1,134 @@
+
+
+.container-fluid { 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #e6d2ec;
+  padding: 0 20px; 
+  flex-wrap: nowrap;
+}
+
+
+.navbar-logo img { /* clase que llama al logo */
+  width: 90px; /* ancho del logo */
+  height: auto; /* altura del logo */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caviar+Dreams&display=swap');
+
+.brand-nombre {
+  font-family: 'Caviar Dreams', sans-serif;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 60px;
+}
+
+.logo-brand-group{
+   display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+/* se manda a llamar el contenido dentro de los botones del nav */
+.navbar-nav .nav-link {
+  color: #2c3e50; /* color de la letra */
+  font-weight: 600; /* grueso de las letras */
+  font-size: 1.4rem; /* tamaño de la fuente de la letra */
+  padding: 10px 15px; /* espaciado */
+  margin: 0 5px; /* espacio que separa a mis elementos de esta clase */
+  border-radius: 30px; /* borde redondeado de los botones */
+  transition: background-color 0.3s, color 0.3s; /* tiempo que tardará en aplicar el cambio de color al pasar el cursor */
+}
+
+.navbar-nav .nav-link:hover, /* me sombrea o cambia de color los botones */
+.navbar-nav .nav-link:focus, /* resalta el botón */
+.navbar-nav .nav-link.active { /* propiedades de mis botones */
+  background-color: #421f52;
+  color: #fff;
+}
+
+.iconos-usuario { /* clase que me manda a llamar los iconos de carrito y usuario */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 10px;
+  flex-shrink: 0; /* No se achican ni deforman */
+}
+
+/* se asigna tamaño de logos de carrito y usuario */
+.logo1 {
+  width: 40px;
+  height: 40px;
+}
+
+/* sombreado de iconos */
+.logo1:hover {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+/* footer general de la página */
+.mi-footer {
+  background-color: #e6d2ec;  /* color de fondo */
+  padding: 20px 0; /* espacio arriba y abajo */
+  margin-top: 20px;  /* separación del contenido */
+  text-align: center !important;  /* centra el texto */
+  font-size: 1.1rem;   /* tamaño del texto */
+  font-family: "Montserrat", sans-serif; /* fuente de letra */
+  color: #421f52;
+  width: 100%;   /* ancho de la pantalla */
+}
+
+.logo-footer {
+  width: 10px;    /* tamaño del logo */
+  margin-bottom: 10px;  /* espacio debajo del logo */
+}
+
+.social-icons i {
+  font-size: 24px;  /* tamaño de los íconos */
+  color: #333;
+  margin: 0 10px;     /* espacio entre cada ícono */
+}
+
+
+/* responsivo */
+@media (max-width: 768px) {
+  .nav-pills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* se ajusta mejor a pantallas pequeñas */
+  .navbar-logo img {
+    width: 70px;
+    height: 50px;
+  }
+
+  /* reduce el tamaño de los iconos del usuario */
+  .logo1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* disminuye un poco el tamaño del texto */
+  .mi-footer {
+    font-size: 1rem;
+  }
+}

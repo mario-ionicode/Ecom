@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de sesión</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Estilos específicos para nav y footer -->
+    <link rel="stylesheet" href="../componentes/nav-footer.css"> 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="inicioSesion.css" />
+
+  <!-- Script -->
+  <script src="inicioSesion.js" defer></script>
+</head>
+
+<body>
+ <!--Para linkear -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+  <div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+
+      <!-- Columna de la imagen -->
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+        <img src="img/brownies.webp" alt="Imagen lateral" class="img-fluid w-100" />
+      </div>
+
+      <!-- Columna del formulario -->
+      <div class="col-md-5">
+        <div class="card">
+         
+          <div class="card-body">
+            <!-- Logo o imagen superior -->
+            <div class="text-center mb-3">
+              <img src="img/fondo2.jpg" alt="Imagen logo" class="img-fluid"/>
+            </div>
+
+            <!-- Alerta de validación -->
+            <div id="alerta" class="alert alert-danger d-none" role="alert"></div>
+
+            <!-- Formulario -->
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" id="email" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" id="password" class="form-control" />
+              </div>
+
+              <div class="extra-links text-end">
+                <a href="../pagina-recuperacion/recover.html">¿Olvidaste tu contraseña? pide ayuda</a>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 mt-3">Ingresar</button>
+
+              <div class="text-center extra-links mt-3">
+                <a href="../registro2/reg.html">Crea una cuenta</a>
+                <!--<p class="mt-2 mb-2">También puedes ingresar con</p>
+
+                <button type="button" class="btn btn-google w-100">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google logo" />
+                  Ingresar con Google
+                </button> -->
+              </div>
+            </form>
+
+          </div> <!-- end card-body -->
+        </div> <!-- end card -->
+      </div> <!-- end col formulario -->
+
+    </div> <!-- end row -->
+  </div><!-- end container -->
+  </main> 
+   <!--Para linkear -->
+   <div id="footer-placeholder"></div>
+    <!-- Scripts para cargar componentes -->
+  <script>
+    fetch('../componentes/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+
+    fetch('../componentes/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

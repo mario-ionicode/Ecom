@@ -1,0 +1,325 @@
+/* --- Variables y Reset Global --- */
+:root {
+  --primary-color: rgb(188, 157, 200);
+  --secondary-color: rgb(170, 135, 185);
+  --text-dark: #333;
+  --text-light: #f8f9fa;
+  --background-light: #f4f4f4;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: rgb(3,94,95) !important; 
+}
+
+/* --- Carrusel --- */
+.hero-carousel {
+  margin-bottom: 3rem;
+}
+
+.carousel-container-custom {
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-img-altura {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(70%);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 60%;
+  left: 5%;
+  bottom: 10%;
+  text-align: left;
+  color: var(--text-light);
+}
+
+.carousel-caption h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* --- Botones Personalizados --- */
+.btn-primary-custom,
+.btn-secondary-custom,
+.btn-order-cta {
+  background-color: var(--primary-color);
+  color: #e6d2ec;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
+}
+
+.btn-primary-custom {
+  color: #d8a2e9 !important;
+}
+
+.btn-primary-custom:hover,
+.btn-secondary-custom:hover,
+.btn-order-cta:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-order-cta {
+  font-size: 1.5rem;
+  padding: 1.5rem 3rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*Efectos para boton carrusel*/
+.btn-primary-custom {
+  position: relative;
+  color: #d8a2e9;
+  background-color: black;
+  border: 2px solid #d8a2e9;
+  box-shadow: 0 0 10px #d8a2e9;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-primary-custom::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: rotate(25deg);
+  transition: all 0.5s ease;
+}
+
+/*destello dinámico.*/
+.btn-primary-custom:hover::after {
+  top: 0;
+  left: 100%;
+}
+
+.btn-primary-custom:hover {
+  box-shadow: 0 0 20px #d8a2e9, 0 0 40px #d8a2e9;
+}
+
+/* --- Productos Destacados --- */
+.featured-products {
+  background-color: var(--background-light);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+
+.featured-products h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card .card-title {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.product-card .card-footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--background-light);
+  border-top: none;
+}
+
+/* --- Beneficios --- */
+.benefits-section {
+  background-color: #f8f8f8;
+  color: rgb(188, 157, 200);
+  padding: 4rem 0;
+}
+
+.benefits-section img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.benefits-section .benefit-icon-small {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+}
+
+.benefits-section p {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.btn-flotante {
+    font-size: 16px;
+    /* Cambiar el tamaño de la tipografia */
+    text-transform: uppercase;
+    /* Texto en mayusculas */
+    font-weight: bold;
+    /* Fuente en negrita o bold */
+    color: #ffffff;
+    /* Color del texto */
+    border-radius: 40px;
+    /* Borde del boton */
+    letter-spacing: 2px;
+    /* Espacio entre letras */
+    background-color: #8871a1;
+    /* Color de fondo */
+    padding: 18px 30px;
+    /* Relleno del boton */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+.btn-flotante:hover {
+    background-color: #2c2fa5;
+    /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+  .carousel-img-altura {
+    height: 450px;
+  }
+
+  .carousel-caption {
+    max-width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .carousel-caption .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-img-altura {
+    height: 350px;
+  }
+
+  .carousel-caption {
+    max-width: 90%;
+    padding: 1rem;
+    bottom: 5%;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .btn-order-cta {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  .benefits-section img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .benefits-section .benefit-icon-small {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefits-section p {
+    font-size: 1rem;
+  }
+}
+
+/* --- Accesibilidad y mejora UX --- */
+.btn:focus {
+  box-shadow: none;
+  outline: none;
+}

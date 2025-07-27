@@ -1,0 +1,158 @@
+/* Fuente y fondo general */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mantiene el main creciendo y empuja el footer abajo */
+main {
+  flex: 1;
+}
+
+/* Imagen lateral */
+.col-md-5.text-center img {
+  max-height: 460px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Tarjeta de formulario */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Contenedor del contenido */
+.card-body {
+  padding: 2rem;
+}
+
+.card-body img {
+  max-height: 160px;
+}
+
+/* Etiquetas de inputs */
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs con fondo verde claro */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid rgb(3, 94, 95) !important;
+  background-color: #d1f0ec !important;
+  color: rgb(3, 94, 95) !important;
+}
+
+/* Estilo al enfocar input */
+.form-control:focus {
+  background-color: #b8e5e0 !important;
+  border-color: rgb(3, 94, 95) !important;
+  box-shadow: 0 0 0 0.2rem rgba(3, 94, 95, 0.25) !important;
+}
+
+/* Botón de ingresar */
+.btn-primary {
+  background-color: rgb(3, 94, 95) !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Hover botón */
+.btn-primary:hover {
+  background-color: #02494a !important;
+}
+
+/* Enlaces extras */
+.extra-links a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: rgb(3, 94, 95);
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* Botón Google (comentado por ahora) */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: 500;
+  color: rgb(3, 94, 95);
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Alertas */
+.alert {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Footer (si quieres forzarle un estilo) */
+#footer-placeholder {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 575.98px) {
+  .col-md-5.text-center img {
+    max-height: 200px; /* imagen más pequeña */
+  }
+  
+  .card-body {
+    padding: 1rem; /* menos padding */
+  }
+
+  .form-label {
+    font-size: 0.9rem; /* texto más pequeño */
+  }
+
+  .btn-primary {
+    font-size: 1rem; /* botón más grande para facilitar el toque */
+  }
+}
+
+/* Para tablets (pantallas medianas) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .col-md-5.text-center img {
+    max-height: 280px; /* imagen un poco más grande */
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Para computadoras (pantallas grandes) */
+@media (min-width: 992px) {
+  .col-md-5.text-center img {
+    max-height: 360px; /* imagen más grande */
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+}
+

@@ -1,0 +1,149 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Contenedor  principal */
+.layout-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: 100vh;
+  padding: 2rem;
+  flex-wrap: wrap; /* para que se acomode  */
+}
+
+
+.form-container {
+  flex: 1 1 500px; /* flexible con mínimo de 500px */
+  max-width: 600px;
+}
+
+
+.image-container {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout-flex {
+    flex-direction: column;
+  }
+
+
+  .image-container {
+    margin-top: 2rem;
+  }
+
+
+  .image-container img {
+    max-width: 90%;
+  }
+}
+
+
+
+
+/* Contenedor del formulario */
+.form-cont {
+  width: 100%;
+  max-width: 600px;
+}
+
+
+/* Imagen decorativa */
+.imagen-decorativa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+
+.imagen-decorativa img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*  Etiquetas */
+.form-label {
+  color: rgb(198, 114, 225);
+  font-weight: bold;
+  display: block;
+}
+
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  background-color: rgb(11, 150, 153);
+  border: 1px solid #9fe1e2;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 10px rgba(11, 150, 153, 0.5);
+  outline: none;
+}
+
+
+/* Botón */
+button#btnSend {
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button#btnSend:hover {
+  background-color: rgb(9, 130, 133);
+  transform: scale(1.02);
+}
+
+
+/* Responsive: para tablets y móviles */
+@media (max-width: 991px) {
+  .layout-flex {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+
+  .imagen-decorativa {
+    margin-top: 2rem;
+  }
+
+
+  .imagen-decorativa img {
+    max-width: 90%;
+  }

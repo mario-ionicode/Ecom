@@ -1,0 +1,203 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.tooltip-text {
+      visibility: hidden;
+
+      width: 220px;
+      background-color: rgb(222, 210, 231);
+      color: black;
+      text-align: left;
+      padding: 10px;
+      border-radius: 6px;
+      opacity: 0;
+      /* Posición */
+      position: relative;
+      bottom: 50%;
+      left: 100%;
+      transform: translateX(-50%);
+      z-index: 1;
+}
+
+.tooltip-trigger {
+      position: relative;
+}
+
+.tooltip-trigger:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+}
+
+.cartas {
+      margin: 50px;
+      transition: transform 0.2s;
+      width: auto;
+      height: auto;
+      padding: 10px;
+      font-family: montserrat;
+
+}
+
+.card-img {
+      margin: 10px;
+}
+
+
+.listaProductos{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 7rem;
+      
+}
+
+.boton {
+      height: 35px;
+      font-size: 15px;
+      color: white;
+      background-color: rgb(3, 94, 95);
+      border: none;
+}
+
+.boton:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+}
+
+.btn-mas {
+      border: rgb(3, 94, 95) 1px solid;
+      border-radius: 50%;
+      color: rgb(3, 94, 95);
+      margin: 5px;
+      height: 27px;
+      width: 27px;
+}
+
+.btn-mas:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+}
+
+.btn-menos{
+      border: rgb(3, 94, 95) 1px solid;
+      border-radius: 50%;
+      color: rgb(3, 94, 95);
+      margin: 5px;
+      height: 27px;
+      width: 27px;
+}
+.btn-menos:hover{
+      transform: scale(1.2);
+      transition: 0.3s;
+}
+
+.card-body {
+      display: flex;
+}
+
+.productos-body {
+      background-image: url(Productos/Background2.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      z-index: -1;
+}
+.overlay {    /* esta seccion hace opaca la imagen (logo) del fondo de la pagina */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.80); /* Blanco con opacidad del 80% */
+      z-index: -1;
+    }
+
+@media (max-width: 768px) {
+  .productos-body {
+    background-image: url("Productos/Background.png");
+    background-size: contain; /* Escala la imagen completa */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centra tanto en vertical como horizontal */
+  }
+}
+
+
+/*Para el carrito*/
+
+.carrito-lateral {
+  position: fixed;
+  top: 7%;
+  right: -300px; /* Oculto inicialmente */
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.carrito-lateral.mostrar {
+  right: 0; /* Mostrar carrito */
+}
+
+.cerrar{
+      background-color: rgb(3, 94, 95);
+      color: white;
+      border: none;
+      padding: 10px;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+}
+.cerrar:hover{
+      transform: scale(1.2);
+      transition: 0.3s;
+      background-color: rgb(30, 150, 150);
+}
+
+
+/*Animacion para el pop up*/
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+
+
+/*Pop up del carrito actual*/
+.popup-carrito {
+  position: fixed;
+  top: 20%;
+  right: 10px;
+  background-color:  rgb(3, 94, 95);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none; /* Oculto por default */
+  z-index: 1100;
+}
+
+.popup-carrito:hover {
+  background-color: rgb(132, 114, 162);
+}
